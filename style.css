@@ -1,0 +1,32 @@
+:root{
+  --primary: #0d6efd;
+  --radius: 12px;
+}
+body{
+  font-family: system-ui, sans-serif;
+  background: #f8f9fa;
+  color: #212529;
+}
+.site-header{
+  background: linear-gradient(180deg, rgba(13,110,253,1) 0%, rgba(0,123,255,0.9) 100%);
+  border-radius: 0 0 18px 18px;
+}
+.workshop-grid{
+  display:grid;
+  grid-template-columns: 1fr;
+  gap:12px;
+}
+.workshop-card{
+  border-radius: var(--radius);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  transition: transform .18s ease;
+}
+.workshop-card:hover{
+  transform: translateY(-4px);
+}
+@media(min-width:700px){
+  .workshop-grid{ grid-template-columns: repeat(2, 1fr); }
+}
+@media(min-width:1100px){
+  .workshop-grid{ grid-template-columns: repeat(3, 1fr); }
+}
